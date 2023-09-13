@@ -33,5 +33,27 @@ let patients = [
                 {cough: "cough"},
                 {increaseApetite: "increase in apetite"}
             ]
-    }
+    },
+   
 ]
+
+function showPatients() {
+     let hospital = "<h1>"+ hospitalName + "</h1>";
+
+     for (let i = 0; i<patients.length; i++){
+
+      
+
+        let header2 = "<h2>"+ patients[i].fullName + patients[i].dateOfBirth.toString + "</h2>";
+        let ul = "<ul>";
+        let line = "<li>"; + patients[i].symptoms[i] + "</li>";
+        let line2 = "<li>"; + patients[i].symptoms[i] + "</li>";
+        let line3 = "<li>"; + patients[i].symptoms[i] + "</li>";
+        let closeul = "</ul>";
+
+    }
+    return header2;
+}
+
+showPatients();
+console.log(header2)
