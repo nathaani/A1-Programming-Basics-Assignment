@@ -1,59 +1,73 @@
+let hospital;
+let header;
+let ul;
+let line;
+let closeul;
+
 
 let hospitalName = "Toronto Hospital"
 let patients = [
     {
         id: "001",
         fullName: "Natalie Lew",
-        dateOfBirth: new Date (1995,3,10),
+        dateOfBirth: new Date (1995,3,10).toDateString(),
         symptoms: 
             [
-                {cough: "cough"},
-                {sneeze: "sneeze"},
-                {rash: "rash"}
+                {symptom: "cough"},
+                {symptom: "sneeze"},
+                {symptom: "rash"}
             ]
     },
     {
         id: "002",
         fullName: "Ben Ten",
-        dateOfBirth: new Date (1992,12,3),
+        dateOfBirth: new Date (1992,12,3).toDateString(),
         symptoms: 
             [
-                {fever: "fever"},
-                {swelling: "swelling"},
-                {nausea: "nausea"}
+                {symptom: "fever"},
+                {symptom: "swelling"},
+                {symptom: "nausea"}
             ]
     },
     {
         id: "003",
         fullName:"Chris Mas",
-        dateOfBirth: new Date (1970,12,31),
+        dateOfBirth: new Date (1970,12,31).toDateString(),
         symptoms:
             [
-                {highTemperature: "high temperature"},
-                {cough: "cough"},
-                {increaseApetite: "increase in apetite"}
+                {symptom: "high temperature"},
+                {symptom: "cough"},
+                {symptom: "increase in apetite"}
             ]
     },
    
 ]
 
+
+
 function showPatients() {
-     let hospital = "<h1>"+ hospitalName + "</h1>";
+     hospital= "<h1>"+ hospitalName + "</h1>"
+     hospital = console.log(hospital)
 
-     for (let i = 0; i<patients.length; i++){
+     for (let i = 0; i<3; i++){
 
-      
 
-        let header2 = "<h2>"+ patients[i].fullName + patients[i].dateOfBirth.toString + "</h2>";
-        let ul = "<ul>";
-        let line = "<li>"; + patients[i].symptoms[i] + "</li>";
-        let line2 = "<li>"; + patients[i].symptoms[i] + "</li>";
-        let line3 = "<li>"; + patients[i].symptoms[i] + "</li>";
-        let closeul = "</ul>";
+         header = "<h2>"+ patients[i].fullName + "," +  patients[i].dateOfBirth +"</h2>"
+        
+         header = console.log(header)
+         console.log ("<ul>")
+
+         for(let Y = 0; Y<3; Y++){
+         
+            line = "<li>" + patients[i].symptoms[Y].symptom + "</li>"
+            line = console.log(line)
+
+        }
+        console.log ("</ul>")
 
     }
-    return header2;
 }
 
-showPatients();
-console.log(header2)
+
+console.log(showPatients());
+
