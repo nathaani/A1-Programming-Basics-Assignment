@@ -1,14 +1,7 @@
-let hospital;
-let header;
-let ul;
-let line;
-let closeul;
-
-
 let hospitalName = "Toronto Hospital"
 let patients = [
     {
-        id: "001",
+        id: 1001,
         fullName: "Natalie Lew",
         dateOfBirth: new Date (1995,3,10).toDateString(),
         symptoms: 
@@ -19,7 +12,7 @@ let patients = [
             ]
     },
     {
-        id: "002",
+        id: 1002,
         fullName: "Ben Ten",
         dateOfBirth: new Date (1992,12,3).toDateString(),
         symptoms: 
@@ -30,7 +23,7 @@ let patients = [
             ]
     },
     {
-        id: "003",
+        id: 1003,
         fullName:"Chris Mas",
         dateOfBirth: new Date (1970,12,31).toDateString(),
         symptoms:
@@ -43,6 +36,11 @@ let patients = [
    
 ]
 
+let hospital;
+let header;
+let ul;
+let line;
+let closeul;
 
 
 function showPatients() {
@@ -53,8 +51,8 @@ function showPatients() {
 
 
          header = "<h2>"+ patients[i].fullName + "," +  patients[i].dateOfBirth +"</h2>"
-        
          header = console.log(header)
+
          console.log ("<ul>")
 
          for(let Y = 0; Y<3; Y++){
@@ -63,11 +61,21 @@ function showPatients() {
             line = console.log(line)
 
         }
-        console.log ("</ul>")
 
+        console.log ("</ul>")
     }
 }
 
 
 console.log(showPatients());
+let randomPatientId;
 
+function getPatients(){
+     let randomPatients = Math.floor(Math.random()* patients.length)
+
+     randomPatientId = patients[randomPatients].id
+     return randomPatientId;
+}
+
+getPatients();
+console.log(randomPatientId);
